@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 110%;
   height: 110%;
-  background-image: url(../Pictures/bg.jpg);
+  background-image: url(../Pictures/background.jpg);
   background-size: contain;
   background-position: center;
   transition: background-position 0.5s;
