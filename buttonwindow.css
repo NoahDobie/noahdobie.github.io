@@ -1,0 +1,64 @@
+.button-window {
+    display: flex;
+}
+
+.button-window ul li{
+    position: relative;
+    list-style: none;
+    width: 55px;
+    height: 55px;
+    background: rgb(60,60,60);
+    border: 2px solid white;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.button-window ul li:hover{
+    width: 120px;
+    background: rgb(37,37,37);
+    border: 2px solid rgb(37,37,37);
+}
+
+.button-window ul li .icon{
+    color: white;
+    font-size: 2em;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.button-window ul li:hover .icon{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.button-window ul li span{
+    position: absolute;
+}
+
+.button-window ul li .title{
+    color: darkred;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(0);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+
+.button-window ul li:hover .title{
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+
+@media (orientation: landscape) {
+    .button-window ul {
+        position: relative;
+        display: flex;
+        gap: 50px;
+    }
+
+}
