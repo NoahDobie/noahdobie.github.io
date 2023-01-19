@@ -87,7 +87,7 @@
     max-height: 15vh;
     flex-basis: 20%;
   }
-
+  
 }
   
 /* Portrait Orientation CSS */
@@ -171,8 +171,8 @@
   .whatido-box {
     min-width: 15vw;
     max-width: 15vw;
-    min-height: 12vh;
-    max-height: 12vh;
+    min-height: max-content;
+    max-height: 15vh;
   }
 
 }
@@ -393,7 +393,7 @@
 .about-container .profile-picture2 {
   background-image: url(../Pictures/profile-picture3.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-position: center;
   border-radius: 50%;
   border: 0.2vw solid rgba(255, 255, 255, 0.2);

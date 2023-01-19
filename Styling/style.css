@@ -9,18 +9,6 @@ body {
   display: none;
 }
 
-.background {
-  position: fixed;
-  top: -5%;
-  left: -5%;
-  width: 120%;
-  height: 120%;
-  background-image: url(../Pictures/background.jpg);
-  background-size: cover;
-  background-position: center;
-  transition: background-position 0.5s;
-}
-
 .center-screen {
   display: flex;
   flex-direction: column;
@@ -48,6 +36,20 @@ body {
     width: 10vw;
     height: 10vw;
   }
+
+  .background {
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    width: 120%;
+    height: 120%;
+    background-image: url(../Pictures/background.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotate(180deg);
+    transition: background-position 0.5s;
+  }
+
 }
 
 @media only screen and (orientation: portrait) {
@@ -69,6 +71,20 @@ body {
     width: 15vw;
     height: 15vw;
   }
+
+  .background {
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    width: 120%;
+    height: 120%;
+    background-image: url(../Pictures/background-portrait.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.5s;
+  }
+
 }
 
 .middle-window {
