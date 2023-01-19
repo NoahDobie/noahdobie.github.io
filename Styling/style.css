@@ -11,12 +11,12 @@ body {
 
 .background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 110%;
-  height: 110%;
+  top: -5%;
+  left: -5%;
+  width: 120%;
+  height: 120%;
   background-image: url(../Pictures/background.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   transition: background-position 0.5s;
 }
