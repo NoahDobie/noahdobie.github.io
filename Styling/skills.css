@@ -157,6 +157,7 @@
 }
 
 .logos-container {
+    margin-top: 5%;
     flex-wrap: wrap;
     justify-content: right;
 }
