@@ -77,7 +77,7 @@
   .about-container .profile-picture2 {
     width: 15vw;
     height: 15vw;
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
   }
 
   .whatido-box {
@@ -90,8 +90,7 @@
   
 }
   
-/* Portrait Orientation CSS */
-@media only screen and (orientation: portrait) {
+@media (orientation: portrait)  { /* smartphones, iPhone, portrait 480x320 phones */
   
   .about {
     display: grid; 
@@ -164,21 +163,36 @@
   }
 
   .about-container .profile-picture2 {
-    width: 22vw;
-    height: 22vw;
+    width: 40vw;
+    height: 40vw;
+    margin-top: 3vh;
+    margin-bottom: -3vh;
   }
 
   .whatido-box {
-    min-width: 15vw;
-    max-width: 15vw;
-    min-height: max-content;
-    max-height: 15vh;
+    min-width: 30vw;
+    max-width: 30vw;
+    min-height: 200px;
+    max-height: 25vh;
   }
+
+  .whatido-box h3 {
+    font-size: 34px;
+    line-height: 1em;
+  }
+
+  .whatido-box p {
+    font-size: 26px;
+    line-height: 1.8em;
+  }
+
 
 }
 
+
 #about {
   line-height: 1.5em;
+  padding-top: 5px;
 }
 
 #about .about-whatido {
@@ -205,7 +219,7 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 5px;
-  background-color: rgb(60,60,60);
+
   display: block;
   justify-content: center;
   align-items: center;
@@ -391,14 +405,10 @@
 }
 
 .about-container .profile-picture2 {
-  background-image: url(../Pictures/profile-picture3.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  /*background-image: url(../Pictures/profile-picture3.jpg);*/
+  background-size: cover;
   background-position: center;
   border-radius: 50%;
   border: 0.2vw solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  margin: 0 auto;
-  margin-top: 10%;
-  padding-bottom: 0%;
+  justify-self: center;
 }

@@ -1,0 +1,219 @@
+@media only screen and (orientation: landscape) {
+
+    .projects-container { 
+        margin: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, auto));
+        gap: 0px 0px;
+        grid-template-areas:
+          ".";
+    }
+
+    .project-details {  
+        display: grid;
+        grid-template-columns: .75fr .25fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "project-details-desc project-details-skills-container";
+    }
+    
+    .project-details-desc { 
+        grid-area: project-details-desc; 
+    }
+
+    .project-details-skills-container { 
+        grid-area: project-details-skills-container;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-details .project-details-skills {
+        text-align: right;
+    }
+
+    .project-details .project-details-skills .skills-learned {
+        justify-content: right;
+    }
+
+    .project-details .project-details-skills h2 {
+        text-align: right;
+    } 
+    
+     
+}
+
+@media only screen and (orientation: portrait) {
+
+    .projects-container {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, auto));
+        gap: 0px 0px;
+        grid-template-areas:
+          ".";
+    }
+
+    .project-details {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "project-details-desc"
+          "project-details-skills-container";
+    }
+      
+    .project-details-desc { 
+        grid-area: project-details-desc; 
+    }
+
+    .project-details-skills-container { 
+        grid-area: project-details-skills-container;
+        display: flex;
+    }
+
+    .project-details .project-details-skills {
+        width: 100%;
+        text-align: left;
+        padding-left: 5px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .project-details .project-details-skills .skills-learned {
+        justify-content: left;
+    }
+
+    .project-details .project-details-skills h2 {
+        text-align: left;
+    } 
+      
+}
+
+.projects-container h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: white;
+}
+
+#projects h2 i {
+    color:rgba(255, 255, 255, 0.2);
+}
+
+.project {
+    display: block;
+    width: 100%;
+    background-color: rgb(26,26,26);
+    border: 2px solid darkred;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: left;
+}
+
+.unexpanded-view {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.unexpanded-view h2 {
+    width: 35%;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: white;
+}
+
+.unexpanded-view p {
+    width: 50%;
+    color: rgb(60,60,60);
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.unexpanded-view i {
+    color: rgb(60,60,60);
+    font-weight: bold;
+    padding: 2px;
+    margin-left: auto;
+    transition: .2s;
+    transition-delay: .2s;
+}
+
+.project .unexpanded-view i.rotated {
+    transform: rotate(180deg);
+    transition: .2s;
+}
+
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5em;
+    transition: max-height .2s ease-out;
+}
+
+.project-details.open {
+    transition: max-height 1s ease-out;
+}
+
+.project-details-desc p {
+    color: white;
+}
+
+.project-details a {
+    text-decoration: none;
+}
+
+.project-details .project-details-desc {
+    margin: 10px;
+    display: block;
+    text-align: left;
+}
+
+.project-details .project-details-skills-container {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.project-details .project-details-skills {
+    background-color: rgb(60,60,60);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.project-details .project-details-skills .skills-learned {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-details .skills-learned h3 {
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(37,37,37);
+    border: 2px solid darkred;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.project-details .project-details-skills h2 {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-right: 5px;
+}
+ 
+.project-details .project-details-skills-container .github-link {
+    align-self: flex-end;
+    margin: 10px;
+}

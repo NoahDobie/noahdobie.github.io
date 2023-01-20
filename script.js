@@ -1,5 +1,9 @@
 window.onload = (event) => {
 
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.matchMedia("(display-mode: standalone)").matches)) {
+    screen.orientation.lock("portrait");
+ }
+ else {
   const background = document.querySelector('.background');
 
   let x = 0;
@@ -20,6 +24,9 @@ window.onload = (event) => {
       background.style.backgroundPosition = `${x}px ${y}px`;
     });
   });
+ }
+
+  
 
   const projectElements = document.querySelectorAll(".project");
 

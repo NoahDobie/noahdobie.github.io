@@ -1,3 +1,78 @@
+@media (orientation: portrait)   { /* smartphones, iPhone, portrait 480x320 phones */
+
+    .contact-container {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+        gap: 5% 0px; 
+        grid-template-areas: 
+            "info-boxes"
+            "contact-form"; 
+    }
+
+    .info-boxes {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        gap: 0px 0px; 
+        grid-area: info-boxes;
+        display: block;
+    }
+
+    .contact-box-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-boxes h2 {
+        color: white;
+    }
+
+    .info-boxes h2 i {
+        margin-right: 3vw;
+    }
+
+    .contact-form {
+        text-align: left;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        gap: 0px 0px; 
+        grid-area: contact-form; 
+    }
+
+    .contact-form form {
+        text-align: left;
+        justify-content: flex-start;
+        display: block;
+    }
+
+    .contact-box {
+        min-width: 34vw;
+        min-height: 8vh;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-box a {
+        margin-top: 10%;
+    }
+
+    .contact-box {
+        font-size: 24px;
+    }
+
+    .contact-form h5 {
+        color: white;
+        font-size: 17px;
+    }
+}
+
+
 @media only screen and (orientation: landscape) {
 
     .contact-container {
@@ -34,8 +109,19 @@
         max-height: 20vh;
     }
 
-}
+    .contact-form form {
+        text-align: right;
+        justify-content: flex-end;
+        display: block;
+    }
 
+    #contact h3 {
+        font-size: 16px;
+        color: white;
+    }
+
+}
+/*
 @media only screen and (orientation: portrait) {
 
     .contact-container {
@@ -72,20 +158,10 @@
     }
 
 }
+*/
 
 #contact {
     margin: 5%;
-}
-
-#contact h2 {
-    text-transform: uppercase;
-    font-size: 22px;
-    color: white;
-}
-
-#contact h3 {
-    font-size: 16px;
-    color: white;
 }
 
 .info-boxes {
@@ -93,17 +169,12 @@
 }
 
 .contact-box {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-basis: 20%;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 5px;
     background-color: rgb(60,60,60);
-    margin-bottom: 10%;
+    margin-bottom: 2vh;
     transition: .5s;
 }
 
@@ -123,8 +194,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    height: 50%;
     text-decoration: none;
 }
 
@@ -134,15 +203,8 @@
     transition-delay: .25s;
 }
 
-.contact-form a {
-    font-size: 18px;
+.contact-form h5 {
     color: white;
-}
-
-.contact-form form {
-    text-align: right;
-    justify-content: flex-end;
-    display: block;
 }
 
 .contact-form form .input-box {
@@ -150,7 +212,7 @@
     margin-top: 3%;
 }
 
-.contact-form form .input-box a {
+.contact-form form .input-box h4 {
     color: rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
 }
@@ -159,13 +221,18 @@
     background-color: rgb(60,60,60);
     border: 2px solid darkred;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 30px;
     width: 50%;
+    height: 4vh;
     margin-top: 5px;
     color: white;
     min-width: fit-content;
     transition: 1s;
 }
+
+input::placeholder {
+    font-size: 30px;
+} 
 
 .contact-form form .input-box input:focus {
     width: 90%;
@@ -173,11 +240,10 @@
     transition: 1s;
 }
 
-.contact-form form .input-box textarea {
+.contact-form .input-box textarea {
     background-color: rgb(60,60,60);
     border: 2px solid darkred;
     border-radius: 5px;
-    font-size: 18px;
     width: 98%;
     max-width: 600px;
     height: 150px;
@@ -188,19 +254,27 @@
     resize: none;
 }
 
-.contact-form form .input-box textarea:focus {
+.contact-form .input-box textarea:focus {
     transition: 1s;
 }
 
-.contact-form form #submit-button {
-    width: fit-content;
+.contact-form #submit-button {
+    display: block;
+    white-space: nowrap;
+    width: max-content;
+    height: auto;
     margin-top: 5%;
+    margin-bottom: 5%;
     background-color: rgb(60,60,60);
     border: 2px solid darkred;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     align-self: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
 }
-
+  
 

@@ -1,21 +1,122 @@
-body {
+body{
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   cursor: default;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
 }
 
 .hidden {
   display: none;
 }
 
-.center-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-self: unset;
+@media (orientation: portrait)   { /* smartphones, iPhone, portrait 480x320 phones */
+  
+  .body-container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "button-window"
+      "info-pages"
+  }
+  
+  .info-pages {  
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: info-pages;
+    width: 90vw;
+    height: 85vh;
+  }
+  
+  .button-window {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ".";
+    grid-area: button-window;
+  }
+
+  .button-window ul {
+    width: 90vw;
+    height: 8vw;
+  }
+  
+  .pages {
+    display: block;
+  }
+
+  .left-side-container {
+    visibility: hidden;
+    display: none;
+    width: 0;
+  }
+
+  .resume-container {
+    visibility: hidden;
+    display: none;
+    width: 0;
+  }
+
+
 }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+  /*
+  .middle-window {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .info-pages {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .pages {
+    display: block;
+  }
+
+  .left-side-container {
+    width: 0;
+    display: none;
+  }
+  */
+}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+
+}
+
+.background {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 120%;
+  height: 120%;
+  background-image: url(../Pictures/background.jpg);
+  background-size: cover;
+  background-position: right;
+  transform: rotate(180deg);
+}
+
 
 @media only screen and (orientation: landscape) {
   .middle-window {
@@ -38,29 +139,20 @@ body {
   }
 
   .background {
-    position: fixed;
-    top: -5%;
-    left: -5%;
-    width: 120%;
-    height: 120%;
-    background-image: url(../Pictures/background.jpg);
-    background-size: cover;
-    background-position: center;
-    transform: rotate(180deg);
     transition: background-position 0.5s;
   }
 
 }
-
+/*
 @media only screen and (orientation: portrait) {
   .middle-window {
     width: 90vw;
-    height: 50vh;
+    height: 70vh;
   }
 
   .info-pages {
     width: 90vw;
-    height: 50vh;
+    height: 70vh;
   }
 
   .pages {
@@ -73,18 +165,23 @@ body {
   }
 
   .background {
-    position: fixed;
-    top: -5%;
-    left: -5%;
-    width: 120%;
-    height: 120%;
-    background-image: url(../Pictures/background-portrait.jpg);
-    background-size: 100%;
-    background-size: cover;
-    background-position: center;
     transition: background-position 0.5s;
   }
 
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+*/
+
+.button-window {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
 }
 
 .middle-window {
@@ -107,15 +204,15 @@ body {
   display: flex;
 }
 
+
 .left-side-container {
-  width: 25%;
   display: block;
   padding: -50px;
   text-align: center;
   background-color: rgb(60, 60, 60);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-}
+} 
 
 .left-side {
   padding: -50px;
@@ -126,13 +223,13 @@ body {
 }
 
 .pages {
-  width: 75%;
   padding: 10px;
   text-align: center;
   background-color: rgb(37, 37, 37);
   border-radius: 20px;
   overflow-y: scroll;
 }
+
 
 .left-side h1 {
   font-size: 34px;
@@ -174,6 +271,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5vh;
 }
 
 .resume-container a {

@@ -1,3 +1,71 @@
+@media (orientation: portrait)   { /* smartphones, iPhone, portrait 480x320 phones */
+
+    .projects-container {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(min-content, auto));
+        gap: 0px 0px;
+        grid-template-areas:
+          ".";
+    }
+
+    .project-details {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "project-details-desc"
+          "project-details-skills-container";
+    }
+      
+    .project-details-desc { 
+        grid-area: project-details-desc; 
+    }
+
+    .project-details-skills-container { 
+        grid-area: project-details-skills-container;
+        display: flex;
+    }
+
+    .project-details .project-details-skills {
+        width: 100%;
+        text-align: left;
+        padding-left: 5px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .project-details .project-details-skills .skills-learned {
+        justify-content: left;
+    }
+
+    .project-details .project-details-skills h2 {
+        text-align: left;
+    } 
+
+    .unexpanded-view h2 {
+        font-size: 30px;
+    }
+    
+    .unexpanded-view p {
+        font-size: 22px;
+    }
+
+    .unexpanded-view i {
+        margin-right: 2vw;
+    }
+    
+    .project .unexpanded-view i.rotated {
+        margin-right: 2vw;
+    }
+
+    .project-details-desc p {
+        font-size: 22px;
+    }
+}
+
+
 @media only screen and (orientation: landscape) {
 
     .projects-container { 
@@ -43,7 +111,7 @@
     
      
 }
-
+/*
 @media only screen and (orientation: portrait) {
 
     .projects-container {
@@ -92,16 +160,7 @@
       
 }
 
-.projects-container h2 {
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 22px;
-    color: white;
-}
-
-#projects h2 i {
-    color:rgba(255, 255, 255, 0.2);
-}
+*/
 
 .project {
     display: block;
@@ -128,7 +187,6 @@
     width: 35%;
     margin-left: 10px;
     text-transform: uppercase;
-    font-size: 22px;
     color: white;
 }
 
@@ -144,14 +202,13 @@
     color: rgb(60,60,60);
     font-weight: bold;
     padding: 2px;
-    margin-left: auto;
     transition: .2s;
     transition-delay: .2s;
 }
 
 .project .unexpanded-view i.rotated {
-    transform: rotate(180deg);
-    transition: .2s;
+transform: scaleY(-1);
+transition: .2s;
 }
 
 .project-details {
