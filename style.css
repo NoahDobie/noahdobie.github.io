@@ -47,7 +47,7 @@ html {
       
     #middle-window { 
         grid-area: middle-window;
-        height: 85vh;
+        height: 80vh;
         background-color: transparent;
         display: flex;
         align-items: center;
