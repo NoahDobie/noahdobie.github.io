@@ -4,6 +4,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     cursor: default;
     overflow: hidden;
+    height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 #body-container { 
@@ -16,6 +18,8 @@ body {
  
 html {
     overflow: hidden;
+    height: 100vh;
+    min-height: -webkit-fill-available;
 }
   
 .hidden {
