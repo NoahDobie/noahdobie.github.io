@@ -1,0 +1,549 @@
+/* Landscape Orientation CSS */
+@media (orientation: landscape) {
+
+  #about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "about-container"
+      "about-container-bottom";
+  }
+
+  #about-container {
+    margin: 5%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    gap: 0px 2%; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+    grid-area: about-container;
+    margin-bottom: 5vh;
+  }
+
+  #about-container-bottom {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."; 
+    grid-area: about-container-bottom;
+    height: max-content;
+  }
+    
+  #about-container #profile-picture2 {
+    grid-area: 1 / 1 / 1 / 1;
+    text-align: left;
+    }
+    
+  #about-container #personal-info-container {
+    grid-area: 2 / 1 / 3 / 1;
+    text-align: left;
+    margin-top: -5vh;
+  }
+  
+  #about-container #header {
+    grid-area: 1 / 2 / 1 / 2;
+    text-align: right;
+    margin-top: 5vh;
+  }
+
+  #about-container #hobbies {
+    grid-area: 2 / 2 / 3 / 2;
+    text-align: right;
+    margin-top: 8vh;
+  }
+
+  #about-container #hobbies {
+    border-radius: .2vw;
+    padding: 2%;
+    font-size: 1.5vw;
+    line-height: 1.75vw;
+  }
+
+  #hobbies h2 {
+    font-size: 2vw;
+    line-height: 1.75vw;
+  }
+
+  #about-container p {
+    font-size: 1.5vw;
+    line-height: 1.75vw;
+  }
+
+  #about-container h1 {
+    margin-top: .2vw;
+    font-size: 2vw;
+  }
+
+  #about-container h2 {
+    margin-top: 10%;
+    font-size: 1.5vw;
+  }
+  
+  #about-container h3 {
+    font-size: 1.75vw;
+  }
+
+  #about-container h4 {
+    font-size: 1.75vw;
+  }
+  
+  #about-container h4 a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.75vw;
+  }
+
+  #summary-links a {
+    font-size: 1.75vw;
+    padding: .2vw;
+    border: .1vw solid darkred;
+    border-radius: .2vw;
+  }
+  
+  #about-container #hobbies {
+    border-radius: .2vw;
+    padding: 2%;
+  }
+  
+  #about-container #subtext {
+    margin-top: -5%;
+    font-size: 1vw;
+  }
+  
+  #about-container #whatido {
+    grid-area: about-container-bottom;
+  }
+
+  #about-container #about-whatido {
+    grid-area: about-container-bottom;
+  }
+
+  #about-container h4 {
+    margin-top: -2vh;
+  }
+
+  #summary-links {
+    margin-top: 2vh;
+  }
+
+  #about-container #profile-picture2 {
+    width: 18vw;
+    height: 18vw;
+    margin-bottom: 3vh;
+  }
+
+  #about-whatido .whatido-box {
+    font-size: 1.75vw;
+    min-width: 25vw;
+    max-width: 25vw;
+    min-height: 25vh;
+    max-height: 25vh;
+    border: .1vw solid rgba(255, 255, 255, 0.2);
+    border-radius: .5vw;
+    padding: .5vw;
+    margin: 1vw;
+  }
+
+  #whatido {
+    font-size: 2vw;
+  }
+
+  .whatido-box:hover {
+    border: .1vw solid rgba(255, 255, 255, 0.1);
+    padding: .2vw;
+  }
+
+  .whatido-box:hover:before {
+    font-size: 3vw;
+  }
+
+  #about #dynamic-text {
+    font-size: 1vw;
+  }
+  
+  #about-container #profile-picture2 {
+    border: 0.2vw solid rgba(255, 255, 255, 0.2);
+  }
+  
+}
+  
+@media (orientation: portrait)  { /* smartphones, iPhone, portrait 480x320 phones */
+  
+  #about {
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: max-content; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "about-container"
+      "about-container-bottom";
+  }
+
+  #about-container {
+    margin: 3%;
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: .1fr .25fr .25fr .25fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."
+      "."
+      "."
+      "."; 
+    grid-area: about-container;
+  }
+  #about-container-bottom {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "."; 
+    grid-area: about-container-bottom; 
+  }
+
+  #about-container #profile-picture2 {
+    grid-area: 1 / 1;
+    text-align: left;
+  }
+
+  #about-container #header {
+    grid-area: 2 / 1;
+    text-align: right;
+    margin-top: 10%;
+  }
+    
+  #about-container #personal-info-container {
+    grid-area: 3 / 1;
+    text-align: left;
+  }
+  
+  #about-container #hobbies {
+    grid-area: 4 / 1;
+    text-align: right;
+  }
+  
+  #about-container p {
+    font-size: 1.5vh;
+    line-height: 1.75vh;
+  }
+
+  #about-container h1 {
+    margin-top: .2vh;
+    font-size: 2.5vh;
+  }
+
+  #about-container h2 {
+    margin-top: 10%;
+    font-size: 2vh;
+  }
+
+  #personal-info-container h3 {
+    font-size: 1.5vh;
+  }
+  
+  #about-container h4 {
+    font-size: 1.5vh;
+  }
+  
+  #about-container h4 a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vh;
+  }
+
+  #summary-links a {
+    font-size: 1.3vh;
+    padding: .2vh;
+    border: .1vh solid darkred;
+    border-radius: .2vh;
+  }
+  
+  #about-container #hobbies {
+    border-radius: .2vh;
+    padding: 2%;
+    font-size: 1.5vh;
+    line-height: 1.75vh;
+  }
+
+  #hobbies h2 {
+    font-size: 2vh;
+  }
+  
+  #about-container #subtext {
+    margin-top: -2vh;
+    font-size: 1vh;
+  }
+  
+  #about-container #whatido {
+    grid-area: about-container-bottom;
+  }
+
+  #about-container #about-whatido {
+    grid-area: about-container-bottom;
+  }
+
+  #about-container h4 {
+    margin-top: -.5vh;
+  }
+
+  #summary-links {
+    margin-top: 2vh;
+  }
+
+  #about-container #profile-picture2 {
+    width: 18vh;
+    height: 18vh;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+  }
+
+  #about-whatido .whatido-box {
+    font-size: 1.5vh;
+    line-height: 1.5vh;
+    padding: 1vh;
+    min-width: 20vh;
+    max-width: 20vh;
+    min-height: 24vw;
+    max-height: 24vw;
+    border: .1vh solid rgba(255, 255, 255, 0.2);
+    border-radius: .5vh;
+    padding: .5vh;
+    margin-left: .2vh;
+    margin-right: .2vh;
+    margin-bottom: .5vh;
+  }
+
+  #whatido {
+    font-size: 1.75vh;
+  }
+
+  .whatido-box:hover {
+    border: .1vh solid rgba(255, 255, 255, 0.1);
+    padding: .2vh;
+  }
+
+  .whatido-box:hover:before {
+    font-size: 3vh;
+  }
+
+  #about #dynamic-text {
+    margin-bottom: 1vh;
+    font-size: 1vh;
+  }
+  
+  #about-container #profile-picture2 {
+    border: 0.2vh solid rgba(255, 255, 255, 0.2);
+  }
+
+
+}
+
+#about {
+  line-height: 1.5vw;
+  padding-top: .2vw;
+}
+
+#about #about-whatido {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  height: max-content;
+  margin-bottom: 5%;
+}
+
+#whatido {
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 5%;
+}
+
+#whatido #ido {
+  color: darkred;
+}
+
+.whatido-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.whatido-box:hover {
+  background-color: rgb(26, 26, 26);
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0.1);
+  transition: .2s;
+  transition-delay: .25s;
+}
+  
+.whatido-box:hover:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.whatido-box[data-id='1']:before {
+  content: "";
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+  
+.whatido-box[data-id='1']:hover:before {
+  content: "\f233";
+}
+
+.whatido-box[data-id='2']:before {
+  content: ""; 
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+  
+.whatido-box[data-id='2']:hover:before {
+  content: "\f3cf";
+}
+
+.whatido-box[data-id='3']:before {
+  content: "";
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+  
+.whatido-box[data-id='3']:hover:before {
+  content: "\f5fc";
+}
+
+.whatido-box[data-id='4']:before {
+  content: "";
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+  
+.whatido-box[data-id='4']:hover:before {
+  content: "\f5dc";
+}
+
+.whatido-box h3 {
+  text-transform: uppercase;
+}
+
+.whatido-box:hover h3 {
+  color: darkred;
+  transition: .5s;
+}
+
+#about-container p {
+  color: white;
+}
+
+#about-container p a{
+  color: darkred;
+  cursor: pointer;
+}
+
+#about-container h1 {
+  color: white;
+  text-transform: uppercase;
+}
+
+#about-container h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+#about-container h3 {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#about-container h4 {
+  color: white;
+}
+
+#about-container h4 a {
+  text-decoration: none;
+  color: white;
+}
+
+#summary-links a {
+  color: white;
+  background-color: rgb(60,60,60);
+  text-decoration: none;
+  transition: .5s;
+}
+
+#summary-links a:hover {
+  color: white;
+  background-color: rgb(26, 26, 26);
+  transition: .5s;
+}
+
+#about-container #hobbies {
+  background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.55), 
+          rgba(0, 0, 0, 0.55)),
+        url(hobby-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: white;
+}
+
+#about-container #subtext {
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.fa-ul {
+  margin-top: -2%;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  text-align: left;
+}
+
+.fa-ul li {
+  margin-bottom: 2%;
+}
+
+.fa-ul li span i {
+  color: darkred;
+  margin-left: -30%;
+}
+
+#about #dynamic-text {
+  text-transform: lowercase;
+  font-family: 'Consolas';
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#about-container #profile-picture2 {
+  background-image: url(profile-picture3.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  justify-self: center;
+}

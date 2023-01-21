@@ -1,5 +1,5 @@
 window.onload = (event) => {
-
+/*
   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.matchMedia("(display-mode: standalone)").matches)) {
     screen.orientation.lock("portrait");
  }
@@ -25,8 +25,14 @@ window.onload = (event) => {
     });
   });
  }
+ */
 
-  
+ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  screen.orientation.lock('portrait');
+  }
+  else {
+    screen.orientation.unlock;
+  }
 
   const projectElements = document.querySelectorAll(".project");
 
@@ -51,7 +57,6 @@ window.onload = (event) => {
   
   });
 
-
   var text = ["Web Developer", "Computer Science Student", "Mobile Developer", "Overall cool guy"];
   var counter = 1;
   var elem = document.getElementById("dynamic-text");
@@ -66,32 +71,4 @@ window.onload = (event) => {
     }
   }
 
-};
-
-function displayAbout() {
-  document.getElementById('about').classList.remove('hidden');
-  document.getElementById('skills').classList.add('hidden');
-  document.getElementById('projects').classList.add('hidden');
-  document.getElementById('contact').classList.add('hidden');
-}
-
-function displaySkills() {
-  document.getElementById('about').classList.add('hidden');
-  document.getElementById('skills').classList.remove('hidden');
-  document.getElementById('projects').classList.add('hidden');
-  document.getElementById('contact').classList.add('hidden');
-}
-
-function displayProjects() {
-  document.getElementById('about').classList.add('hidden');
-  document.getElementById('skills').classList.add('hidden');
-  document.getElementById('projects').classList.remove('hidden');
-  document.getElementById('contact').classList.add('hidden');
-}
-
-function displayContact() {
-  document.getElementById('about').classList.add('hidden');
-  document.getElementById('skills').classList.add('hidden');
-  document.getElementById('projects').classList.add('hidden');
-  document.getElementById('contact').classList.remove('hidden');
 }
