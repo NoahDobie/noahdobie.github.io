@@ -539,7 +539,7 @@
 #about #dynamic-text {
   text-transform: lowercase;
   font-family: 'Consolas';
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #about-container #profile-picture2 {

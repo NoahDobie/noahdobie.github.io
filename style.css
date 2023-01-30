@@ -49,7 +49,6 @@ html {
     #middle-window { 
         grid-area: middle-window;
         height: 85vh;
-        background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -118,8 +117,8 @@ html {
         width: 82%;
     }
  
-    #middle-window {  
-        background-color: rgb(60, 60, 60);
+    #middle-window {
+        background: linear-gradient(90deg, rgba(60,60,60,1) 50%, rgba(60,60,60,0) 95%);        
         display: grid;
         height: 80vh;
         grid-template-columns: 18% auto;
@@ -132,7 +131,6 @@ html {
     }
 
     #landscape-left-info {
-        background-color: rgb(60, 60, 60);
         border-top-left-radius: 5vw;
         border-bottom-left-radius: 5vw;
     }
@@ -153,7 +151,7 @@ html {
         grid-template-areas:
           "landscape-only-top"
           "social-media";
-        height: 78vh;    
+        height: 78vh;
     }
       
     #landscape-only-top {  
@@ -316,7 +314,7 @@ html {
 }
 
 .pages {
-    background-color: rgb(37,37,37);
+    background: linear-gradient(45deg, rgba(37,37,37,1) 0%, rgba(37,37,37,1) 75%, rgba(0,212,255,0) 100%);
 }
 
 .fa-linkedin {
