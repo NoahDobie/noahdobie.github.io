@@ -27,8 +27,7 @@ window.onload = (event) => {
  }
  */
 
- document.body.requestFullscreen();
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   screen.orientation.lock('portrait');
   }
   else {

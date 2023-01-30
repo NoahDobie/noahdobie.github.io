@@ -4,22 +4,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     cursor: default;
     overflow: hidden;
-    height: 100vh;
-    min-height: -webkit-fill-available;
 }
 
 #body-container { 
+    position: absolute;
+    top: 0;
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-top: 3vh;
     margin-bottom: 0;
     overflow: hidden;
 }
  
 html {
     overflow: hidden;
-    height: 100vh;
-    min-height: -webkit-fill-available;
 }
   
 .hidden {
@@ -30,10 +27,10 @@ html {
 
     body {
         background-image: url('background-portrait.jpg');
-        background-size: 100%;
+        background-size: 100vw 100vh
     }
 
-    #body-container { 
+    #body-container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -51,7 +48,7 @@ html {
       
     #middle-window { 
         grid-area: middle-window;
-        height: 80vh;
+        height: 85vh;
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -105,7 +102,8 @@ html {
         gap: 0px 0px; 
         grid-template-areas: 
           "button-window-container"
-          "middle-window"; 
+          "middle-window";
+        margin-top: 1vw;
     }
       
     #button-window-container {
@@ -155,8 +153,7 @@ html {
         grid-template-areas:
           "landscape-only-top"
           "social-media";
-        height: 78vh;
-        
+        height: 78vh;    
     }
       
     #landscape-only-top {  
@@ -176,7 +173,7 @@ html {
     #social-media {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -185,6 +182,7 @@ html {
           "."
           ".";
         grid-area: social-media;
+        height: max-content;
     }
 
     /* Left side of info box for landscape only */
@@ -211,7 +209,7 @@ html {
         font-size: 1vw;
         text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
         color: white;
-        margin-top: -3vh;
+        margin-top: -4vh;
     }
 
     #landscape-only-container #profile-picture {
@@ -302,6 +300,17 @@ html {
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
+    }
+
+}
+
+@media (orientation: landscape) and (max-height: 700px) {
+
+    #social-media {
+        display: flex;
+        flex-direction: row;
+        height: max-content;
+        margin-top: 10vw;
     }
 
 }
