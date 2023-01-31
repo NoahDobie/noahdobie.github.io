@@ -145,8 +145,8 @@
     font-size: 1.75vw;
     min-width: 25vw;
     max-width: 25vw;
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: max-content;
+    max-height: 28vh;
     border: .1vw solid rgba(255, 255, 255, 0.2);
     border-radius: .5vw;
     padding: .5vw;
@@ -378,11 +378,15 @@
 
 .whatido-box {
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto; 
+  grid-template-areas: 
+    "."
+    "."; 
+  justify-content: center; 
   transition: .5s;
+  background-color: rgb(37,37,37);
 }
 
 .whatido-box:hover {
@@ -392,65 +396,14 @@
   transition: .2s;
   transition-delay: .25s;
 }
-  
-.whatido-box:hover:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.2);
-}
-
-.whatido-box[data-id='1']:before {
-  content: "";
-  color: rgba(255, 255, 255, 0.2);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  transition: all 0.3s ease-in-out;
-}
-  
-.whatido-box[data-id='1']:hover:before {
-  content: "\f233";
-}
-
-.whatido-box[data-id='2']:before {
-  content: ""; 
-  color: rgba(255, 255, 255, 0.2);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  transition: all 0.3s ease-in-out;
-}
-  
-.whatido-box[data-id='2']:hover:before {
-  content: "\f3cf";
-}
-
-.whatido-box[data-id='3']:before {
-  content: "";
-  color: rgba(255, 255, 255, 0.2);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  transition: all 0.3s ease-in-out;
-}
-  
-.whatido-box[data-id='3']:hover:before {
-  content: "\f5fc";
-}
-
-.whatido-box[data-id='4']:before {
-  content: "";
-  color: rgba(255, 255, 255, 0.2);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  transition: all 0.3s ease-in-out;
-}
-  
-.whatido-box[data-id='4']:hover:before {
-  content: "\f5dc";
-}
 
 .whatido-box h3 {
+  grid-area: 1 / 1;
   text-transform: uppercase;
+}
+
+.whatido-box p {
+  grid-area: 2 / 1;
 }
 
 .whatido-box:hover h3 {
@@ -538,14 +491,14 @@
 
 #about #dynamic-text {
   text-transform: lowercase;
-  font-family: 'Consolas';
   color: rgba(255, 255, 255, 0.5);
 }
 
 #about-container #profile-picture2 {
   background-image: url(profile-picture4.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 51% 60%;
+  background-size: 250%;
   border-radius: 50%;
   justify-self: center;
 }

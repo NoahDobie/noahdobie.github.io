@@ -7,7 +7,7 @@
         gap: 5% 0px; 
         grid-template-areas: 
             "info-boxes"
-            "contact-form"; 
+            "contact-form";
     }
 
     .info-boxes {
@@ -42,7 +42,9 @@
         display: grid; 
         grid-auto-columns: 1fr; 
         gap: 0px 0px; 
-        grid-area: contact-form; 
+        grid-area: contact-form;
+        margin-top: -10%;
+        margin-bottom: 10%;
     }
 
     .contact-form form {
@@ -268,6 +270,12 @@
     transition-delay: .25s;
 }
 
+#contact-form {
+    background-color: rgb(26, 26, 26);
+    border-radius: 5%;
+    padding: 2%;
+}
+
 #contact-form h5 {
     color: white;
 }
@@ -297,7 +305,7 @@
 
 #contact-form .input-box textarea {
     background-color: rgb(60,60,60);
-    width: 100%;
+    width: 99%;
     overflow-y: scroll;
     color: white;
     resize: none;

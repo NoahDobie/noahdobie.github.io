@@ -80,6 +80,7 @@
     }
     
     #skills-left-side .progressbar-container {
+        width: 100%;
         border-radius: .2vh;
         border: .2vh solid darkred;
         padding: .15vh;
@@ -191,6 +192,7 @@
     }
     
     #skills-left-side .progressbar-container {
+        width: 85%;
         border-radius: .3vw;
         border: .3vw solid darkred;
         padding: .15vw;
@@ -266,7 +268,6 @@
 }
 
 #skills-left-side .progressbar-container {
-    width: 85%;
     background-color: rgb(37, 37, 37);
     transition: background-color 1s;
     display: flex;
