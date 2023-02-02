@@ -461,7 +461,7 @@
           linear-gradient(
           rgba(0, 0, 0, 0.55), 
           rgba(0, 0, 0, 0.55)),
-        url(hobby-background.jpg);
+        url(./Images/hobby-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -495,7 +495,7 @@
 }
 
 #about-container #profile-picture2 {
-  background-image: url(profile-picture4.jpg);
+  background-image: url(./Images/profile-picture4.jpg);
   background-size: cover;
   background-position: 51% 60%;
   background-size: 250%;
