@@ -5,7 +5,7 @@
     --text-color: rgb(245, 245, 245);
 }
 
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,10 +74,10 @@ a {
 }
 
 #landscape-side {
-    grid-template-columns: 1fr; 
-    grid-template-rows: 35% 10% 10% 40%; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    grid-template-columns: 1fr;
+    grid-template-rows: 35% 10% 10% 40%;
+    gap: 0px 0px;
+    grid-template-areas:
         "."
         "."
         "."
@@ -264,13 +264,13 @@ a {
     #landscape-side {
         width: 0%;
         height: 0%;
-        display: none; 
+        display: none;
     }
 
 }
 
-@media (orientation: landscape) {   
-     
+@media (orientation: landscape) {
+
     .pages {
         width: 80%;
     }
@@ -282,6 +282,7 @@ a {
     }
 
 }
+
 /*  */
 /* END of Main Page Styling */
 /*  */
@@ -293,12 +294,12 @@ a {
     position: absolute;
     overflow: hidden;
     padding: 3%;
-    display: grid; 
-    grid-template-columns: auto; 
-    grid-template-rows: auto max-content; 
-    grid-template-areas: 
-    "about-top"
-    "whatido"; 
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto max-content;
+    grid-template-areas:
+        "about-top"
+        "whatido";
 }
 
 #about-top {
@@ -376,9 +377,8 @@ a {
     flex-direction: column;
     padding: 5% 2% 5% 0;
     background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.65), 
-        rgba(0, 0, 0, 0.65)),
+        linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)),
         url("images/hobby-background.jpg");
     background-size: cover;
     background-position: center;
@@ -443,7 +443,7 @@ a {
 }
 
 .whatido-box:hover {
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
 }
 
 .whatido-box h3 {
@@ -455,7 +455,8 @@ a {
     transition: all .3s;
 }
 
-#summary, #hobbies {
+#summary,
+#hobbies {
     text-align: right;
 }
 
@@ -521,6 +522,7 @@ a {
     }
 
 }
+
 /*  */
 /* END of About Page Styling */
 /*  */
@@ -532,11 +534,11 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: grid; 
+    display: grid;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "top"
-    "lifeskills-wrapper"; 
+    grid-template-areas:
+        "top"
+        "lifeskills-wrapper";
     padding: 3%;
     overflow-x: hidden;
 }
@@ -544,7 +546,7 @@ a {
 #top {
     position: relative;
     grid-area: top;
-    display: grid; 
+    display: grid;
     grid-template-rows: auto;
     width: 100%;
 }
@@ -616,10 +618,14 @@ a {
 }
 
 #coding #progressbars::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 700; content: "\f121";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f121";
 }
 
-#coding h2, #design h2, #other h2 {
+#coding h2,
+#design h2,
+#other h2 {
     margin-top: 5%;
 }
 
@@ -632,7 +638,9 @@ a {
 }
 
 #design #progressbars::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 700; content: "\f5ae";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f5ae";
 }
 
 #design h2 span {
@@ -652,7 +660,9 @@ a {
 }
 
 #other #progressbars::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 700; content: "\f568";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f568";
 }
 
 #other h2 span {
@@ -695,9 +705,8 @@ a {
     border-radius: 1rem;
     text-align: right;
     background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.65), 
-        rgba(0, 0, 0, 0.65)),
+        linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)),
         url("images/knowledges-background.jpg");
     background-size: cover;
     background-position: center;
@@ -786,7 +795,7 @@ a {
     display: block;
     width: 100%;
 }
- 
+
 .skills-card h4 {
     color: var(--text-color);
     text-transform: uppercase;
@@ -858,6 +867,7 @@ a {
     }
 
 }
+
 /*  */
 /* END of Skills Page Styling */
 /*  */
@@ -1028,6 +1038,7 @@ a {
     }
 
 }
+
 /*  */
 /* END of Projects Page Styling */
 /*  */
@@ -1135,7 +1146,8 @@ a {
     margin-bottom: .25rem;
 }
 
-#contact form input, textarea {
+#contact form input,
+textarea {
     font-size: 1.25rem;
     width: 80%;
     color: var(--text-color);
@@ -1146,8 +1158,10 @@ a {
     transition: all .25s;
 }
 
-#contact form input:focus, input:active,
-textarea:focus, textarea:active {
+#contact form input:focus,
+input:active,
+textarea:focus,
+textarea:active {
     border-color: var(--accent-color);
 }
 
@@ -1192,7 +1206,7 @@ textarea:focus, textarea:active {
 }
 
 @media (orientation: landscape) {
-    
+
     #contact-wrapper {
         flex-direction: row;
     }
@@ -1203,6 +1217,7 @@ textarea:focus, textarea:active {
     }
 
 }
+
 /*  */
 /* End of Contact Page Styling */
 /*  */
@@ -1227,7 +1242,7 @@ nav ul {
 }
 
 nav ul li {
-    background: rgb(60,60,60);
+    background: rgb(60, 60, 60);
     border: .1rem solid white;
     border-radius: 1rem;
     cursor: pointer;
@@ -1266,7 +1281,7 @@ nav ul li .title {
 }
 
 nav ul li:hover {
-    background: rgb(37,37,37);
+    background: rgb(37, 37, 37);
 }
 
 nav ul li:hover .title {
@@ -1317,4 +1332,46 @@ nav ul li:hover .title {
 }
 /*  */
 /* END of Navbar styling */
+/*  */
+
+/*  */
+/* Mobile devices in landscape */
+/*  */
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+    #window {
+        height: 90%;
+        margin-top: -2rem;
+    }
+    
+    .pages {
+        width: 100%;
+    }
+
+    #landscape-side {
+        width: 0%;
+        height: 0%;
+        display: none;
+    }
+
+    nav ul {
+        width: 80%;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 10%;
+        height: 2rem;
+    }
+
+    nav ul li .icon {
+        font-size: 100%;
+    }
+
+    nav ul li .title {
+        font-size: 80%;
+    }
+    
+}
+/*  */
+/* END of Mobile devices in landscape */
 /*  */
