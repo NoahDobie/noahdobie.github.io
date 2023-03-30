@@ -269,6 +269,19 @@ a {
 
 }
 
+@media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+
+    #window {
+        height: 100%;
+        margin-top: -15%;
+    }
+
+    nav {
+        height: 50%;
+    }
+    
+}
+
 @media (orientation: landscape) {
 
     .pages {
@@ -409,6 +422,7 @@ a {
     padding: 0;
     grid-area: 2 / 1;
     grid-area: whatido;
+    height: -moz-fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -436,8 +450,8 @@ a {
     margin-top: 1%;
     margin-bottom: 2%;
     padding: .75rem;
-    width: fit-content;
     width: -moz-fit-content;
+    width: fit-content;
     height: max-content;
     transition: all .5s;
 }
@@ -486,6 +500,18 @@ a {
         margin-top: 50%;
     }
 
+}
+
+@media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+
+    #profile-picture-wrapper {
+        width: 40%;
+    }
+
+    #whatido {
+        margin-top: 20%;
+    }
+    
 }
 
 @media (orientation: landscape) {
@@ -698,6 +724,7 @@ a {
 }
 
 #knowledges-wrapper {
+    height: -moz-fit-content;
     height: fit-content;
     padding: 2%;
     right: 0;
@@ -725,8 +752,8 @@ a {
 }
 
 #knowledges h5 {
-    width: fit-content;
     width: -moz-fit-content;
+    width: fit-content;
     margin: 0 .75rem 1rem 0;
     padding: 0 5% 0 5%;
     font-size: 100%;
@@ -1013,6 +1040,15 @@ a {
 
 }
 
+@media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+
+    .project-card h1 {
+        font-size: 200%;
+        width: 50%;
+    }
+
+}
+
 @media (orientation: landscape) {
 
     #projects {
@@ -1205,6 +1241,15 @@ textarea:active {
 
 }
 
+@media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+
+    #contact-info::before {
+        bottom: -15%;
+        right: -5%;
+    }
+
+}
+
 @media (orientation: landscape) {
 
     #contact-wrapper {
@@ -1310,6 +1355,22 @@ nav ul li:hover .title {
 
 }
 
+@media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+
+    nav ul {
+        width: 80%;
+    }
+
+    nav ul li .icon {
+        font-size: 200%;
+    }
+
+    nav ul li .title {
+        font-size: 150%;
+    }
+    
+}
+
 @media (orientation: landscape) {
 
     nav ul {
@@ -1339,10 +1400,12 @@ nav ul li:hover .title {
 /*  */
 @media only screen and (max-device-width: 1000px) and (orientation: landscape) {
     #window {
-        height: 90%;
-        margin-top: -2rem;
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
-    
+
+    /* GENERAL STYLING */
     .pages {
         width: 100%;
     }
@@ -1352,24 +1415,133 @@ nav ul li:hover .title {
         height: 0%;
         display: none;
     }
+    /* END OF GENERAL STYLE */
 
+    /* ABOUT */
+    #about-top {
+        grid-template-columns: 1fr;
+    }
+
+    #profile-picture-wrapper {
+        width: 25%;
+    }
+
+    #personal-info {
+        grid-area: 3 / 1;
+    }
+
+    #summary {
+        grid-area: 2 / 1;
+    }
+
+    #hobbies {
+        grid-area: 4 / 1;
+    }
+
+    #whatido {
+        margin-top: 15%;
+    }
+    /* END OF ABOUT */
+
+    /* SKILLS */
+    #top {
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 5%;
+    }
+
+    #progressbar-wrapper {
+        grid-area: 1 / 1;
+        overflow: hidden;
+    }
+
+    #knowledges-logos-wrapper {
+        grid-area: 1 / 2;
+        margin-top: 10%;
+    }
+
+    #lifeskills-wrapper {
+        margin-top: 5%;
+    }
+
+    #logos {
+        display: none;
+        height: 0%;
+        width: 0%;
+        grid-area: 2 / 2;
+    }
+    /* END OF SKILLS */
+
+    /* PROJECTS */
+    #projects {
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+
+    #projects-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-card-group {
+        padding: 0 3% 0 3%;
+    }
+
+    .projects-card-group #left {
+        grid-area: 1 / 1;
+    }
+
+    .projects-card-group #right {
+        grid-area: 1 / 1;
+    }
+
+    .project-card {
+        max-height: 10rem;
+        margin-bottom: 2%;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+
+    .project-card h1 {
+        font-size: 200%;
+        width: 60%;
+    }
+    /* END OF PROJECTS */
+
+    /* CONTACT */
+    #contact-wrapper {
+        flex-direction: row;
+    }
+
+    #contact-info::before {
+        bottom: -10%;
+        right: -5%;
+    }
+
+    /* END OF CONTACT */
+
+    /* NAVBAR */
     nav ul {
         width: 80%;
         margin: 0;
+        gap: 10%;
     }
 
     nav ul li {
-        width: 10%;
+        width: 15%;
         height: 2rem;
+        gap: 10%;
     }
 
     nav ul li .icon {
-        font-size: 100%;
+        font-size: 110%;
     }
 
     nav ul li .title {
-        font-size: 80%;
+        font-size: 100%;
     }
+    /* END OF NAVBAR */
     
 }
 /*  */

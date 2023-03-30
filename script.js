@@ -85,7 +85,7 @@ function change() {
 
 //PROJECT PAGE
 //RANDOM COLOUR CHANGE OF EACH CARD
-//CLICK LISTENER TO ANIMATE AND EXPAND DROPDOWN/UP
+//CLICK LISTENER TO ANIMATE AND EXPAND DROPDOWN/UP IN SEPARATE FILE
 const projectCards = document.querySelectorAll('.project-card');
 const primaryColors = [
   '129, 0, 24',    // red
@@ -130,70 +130,6 @@ projectCards.forEach((project) => {
 });
 
 // Function to check window orientation and update project cards
-function checkOrientation() {
-
-  projectCards.forEach((project) => {
-
-    const portOrLand = window.innerWidth >= window.innerHeight;
-    const orientation = portOrLand ? 'landscape' : 'portrait';
-
-    // Different orientations have slightly different size values
-    // Soon as orientation changes update these values
-    if (orientation == 'landscape') {
-
-      project.style.maxHeight = '16rem';
-      project.querySelector('h1').style.fontSize = '300%';
-
-    } else if (orientation == 'portrait') {
-
-      project.style.maxHeight = '10rem';
-      project.querySelector('h1').style.fontSize = '200%';
-
-    }
-  
-    project.addEventListener('click', () => {
-
-      const clicked = project.getAttribute('data-clicked') === 'T';
-      project.style.transition = 'max-height 0.5s ease';
-
-      project.setAttribute('data-clicked', clicked ? 'F' : 'T');
-
-      const descVisible = clicked ? 'hidden' : 'visible';
-
-      // Different orientations have slightly different size values
-      if (orientation == 'landscape') {
-
-        project.style.maxHeight = clicked ? '16rem' : `40rem`;
-    
-        const titleSize = clicked ? '300%' : '150%';
-
-        project.querySelector('h1').style.fontSize = titleSize;
-        project.querySelector('#description').style.visibility = descVisible;
-  
-      } else if (orientation == 'portrait') {
-  
-        project.style.maxHeight = clicked ? '10rem' : `60rem`;
-    
-        const titleSize = clicked ? '200%' : '125%';
-
-        project.querySelector('h1').style.fontSize = titleSize;
-        project.querySelector('#description').style.visibility = descVisible;
-    
-      }
-
-      const chevron = clicked ? 'rotate(180deg)' : 'rotate(0deg)';
-      project.querySelector('i').style.transform = chevron;
-  
-    });
-  
-  });
-  
-}
-
-checkOrientation();
-
-// Check the orientation when the window is resized
-window.addEventListener('resize', checkOrientation);
 
 
 //NOT IN USE AT THE MOMENT
