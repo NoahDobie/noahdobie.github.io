@@ -9,58 +9,70 @@ const scrollPositions = {};
 
 pageNames.forEach(page => {
 
-  pages[page] = document.getElementById(page);
+	pages[page] = document.getElementById(page);
 
 });
 
 window.onload = function() {
 
-  showPage("about");
+	showPage("about");
 
 };
 
 function showPage(pageName) {
 
-  pageNames.forEach(page => {
+	pageNames.forEach(page => {
 
-    if (page === pageName) {
-      
-      if (pages[page]) {
+		if (page === pageName) {
 
-        // Display corresponding page
-        pages[page].style.display = "grid";
+			if (pages[page]) {
 
-        // Scroll to top
-        window.scrollTo(0, 0);
+				// Display corresponding page
+				pages[page].style.display = "grid";
+
+				// Scroll to top
+				window.scrollTo(0, 0);
+
+			}
+
+      // Cause progress bars to expand on first load
+      if (pageName === "skills") {
+
+        growProgressbar();
 
       }
 
-    } else {
+		} else {
 
-      // Hide other pages
-      pages[page].style.display = "none";
+			// Hide other pages
+			pages[page].style.display = "none";
 
-    }
+		}
 
-  });
+	});
 
 }
 
 //SKILLS PAGE
 //PROGRESS BAR EXPANSION ON LOAD
-const progressbars = document.querySelectorAll('.progressbar .skill');
+function growProgressbar() {
 
-progressbars.forEach(function(skill) {
+  const progressbars = document.querySelectorAll(".progressbar .skill");
 
-  let value = skill.getAttribute('value');
+  progressbars.forEach(function(skill) {
 
-  setTimeout(function() {
+    let value = skill.getAttribute("value");
+  
+    setTimeout(function() {
+  
+      skill.style.width = value + "%";
+  
+    }, 100);
+  
+  });
 
-    skill.style.width = value + '%';
+}
 
-  }, 100);
-
-});
 
 //ABOUT PAGE
 //DYNAMIC TEXT ABOUT NAME TO CHANGE EVERY 3 SECONDS
@@ -72,28 +84,28 @@ var inst = setInterval(change, 3000);
 
 function change() {
 
-  elem.innerHTML = text[counter];
-  counter++;
+	elem.innerHTML = text[counter];
+	counter++;
 
-  if (counter >= text.length) {
+	if (counter >= text.length) {
 
-    counter = 0;
+		counter = 0;
 
-  }
+	}
 
 }
 
 //PROJECT PAGE
 //RANDOM COLOUR CHANGE OF EACH CARD
-//CLICK LISTENER TO ANIMATE AND EXPAND DROPDOWN/UP IN SEPARATE FILE
-const projectCards = document.querySelectorAll('.project-card');
+//CLICK LISTENER TO ANIMATE AND EXPAND DROPDOWN/UP IN SEPARATE FILE (PROJECTS.JS)
+const projectCards = document.querySelectorAll(".project-card");
 const primaryColors = [
-  '129, 0, 24',    // red
-  '0, 0, 255',    // blue
-  '0, 128, 0',    // green
-  '128, 0, 128',  // purple
-  '0, 255, 255',  // cyan
-  '255, 0, 255',  // magenta
+	"129, 0, 24", // red
+	"0, 0, 255", // blue
+	"0, 128, 0", // green
+	"128, 0, 128", // purple
+	"0, 255, 255", // cyan
+	"255, 0, 255", // magenta
 ];
 
 // Temp array to use to repeat if more than primaryColors elements in projectCards
@@ -101,36 +113,33 @@ const usedColors = [];
 
 projectCards.forEach((project) => {
 
-  if (primaryColors.length === 0) {
-  
-    // If all colors have been used, swap the arrays
-    primaryColors.push(...usedColors);
-    usedColors.length = 0;
-  
-  }
-  
-  const randomIndex = Math.floor(Math.random() * primaryColors.length);
-  const randomColor = primaryColors[randomIndex];
-  
-  // Add used colour to used array
-  usedColors.push(randomColor);
-  // Remove the selected color from the array
-  primaryColors.splice(randomIndex, 1);
-  
-  project.style.backgroundColor = `rgba(${randomColor}, 0.5)`;
-  
-  const innerelements = project.querySelectorAll("#skills h5");
-  
-  innerelements.forEach((text, i) => {
-  
-    text.style.backgroundColor = `rgba(${randomColor}, 0.5)`;
-  
-  });
+	if (primaryColors.length === 0) {
+
+		// If all colors have been used, swap the arrays
+		primaryColors.push(...usedColors);
+		usedColors.length = 0;
+
+	}
+
+	const randomIndex = Math.floor(Math.random() * primaryColors.length);
+	const randomColor = primaryColors[randomIndex];
+
+	// Add used colour to used array
+	usedColors.push(randomColor);
+	// Remove the selected color from the array
+	primaryColors.splice(randomIndex, 1);
+
+	project.style.backgroundColor = `rgba(${randomColor}, 0.5)`;
+
+	const innerelements = project.querySelectorAll("#skills h5");
+
+	innerelements.forEach((text) => {
+
+		text.style.backgroundColor = `rgba(${randomColor}, 0.5)`;
+
+	});
 
 });
-
-// Function to check window orientation and update project cards
-
 
 //NOT IN USE AT THE MOMENT
 //VERY LAGGY ON SLOWER DEVICES
@@ -144,11 +153,11 @@ projectCards.forEach((project) => {
 
 //   if (orientation) {
 
-//     const boxes = document.querySelectorAll('.whatido-box');
+//     const boxes = document.querySelectorAll(".whatido-box");
 //     const container = boxes[0].parentElement;
 //     const containerWidth = container.offsetWidth;
 
-//     const wrapper = document.getElementById('whatido-box-wrapper');
+//     const wrapper = document.getElementById("whatido-box-wrapper");
 
 //     let boxIntervals = [];
 
@@ -176,7 +185,7 @@ projectCards.forEach((project) => {
 
 //         }
 
-//         box.style.marginLeft = margin + 'px';
+//         box.style.marginLeft = margin + "px";
 
 //       }, 18);
 
@@ -190,7 +199,7 @@ projectCards.forEach((project) => {
 
 //     });
 
-//     wrapper.addEventListener('mouseenter', function() {
+//     wrapper.addEventListener("mouseenter", function() {
 
 //       boxIntervals.forEach(function(interval) {
 
@@ -200,13 +209,13 @@ projectCards.forEach((project) => {
 
 //       boxes.forEach(function(box) {
 
-//         box.style.marginLeft = '0px';
+//         box.style.marginLeft = "0px";
 
 //       });
 
 //     });
 
-//     wrapper.addEventListener('mouseleave', function() {
+//     wrapper.addEventListener("mouseleave", function() {
 
 //       boxes.forEach(function(box) {
 
@@ -221,7 +230,6 @@ projectCards.forEach((project) => {
 // }
 
 // // Add event listener for resize event on window object
-// window.addEventListener('resize', function() {
+// window.addEventListener("resize", function() {
 //   runOnLandscape();
 // });
-
