@@ -18,8 +18,9 @@ body {
     width: 100svw;
     height: 100svh;
     font-family: 'Montserrat', sans-serif;
+    background-position: center;
+    background-size: contain;
     cursor: default;
-    background: rgb(90, 67, 67);
     color: var(--text-color);
     display: grid;
     grid-template-columns: auto;
@@ -213,6 +214,9 @@ a {
     background: var(--primary-color);
 }
 @media (orientation: portrait) {
+    body{
+        background-image: url("images/background-portrait.jpg");
+    }
     .pages {
         width: 100%;
    }
@@ -223,6 +227,9 @@ a {
    }
 }
 @media only screen and (min-device-width: 1000px) and (orientation: portrait) {
+    body{
+        background-image: url("images/background.jpg");
+    }
     #window {
         height: 100%;
         margin-top: -15%;
@@ -232,6 +239,9 @@ a {
    }
 }
 @media (orientation: landscape) {
+    body{
+        background-image: url("images/background.jpg");
+    }
     .pages {
         width: 80%;
    }
